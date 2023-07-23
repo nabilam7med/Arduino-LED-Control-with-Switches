@@ -1,0 +1,34 @@
+int red=8;
+int green=9;
+int yellow=10;
+int orange=11;
+int blue=12;
+int white=13;
+int s1=4;
+int s2=5;
+
+void setup(){
+ for(int i=8;i<=13;i++){
+pinMode(i, OUTPUT);     
+}
+ pinMode(s1, INPUT);
+  pinMode(s2, INPUT);  
+}
+void loop(){ 
+  if(digitalRead(s1)){
+  analogWrite(green,128);
+    digitalWrite(yellow, HIGH);
+  }
+  else{
+    digitalWrite(green, LOW);
+    digitalWrite(yellow, LOW); 
+} 
+  if(digitalRead(s2)){
+analogWrite(orange, 128);
+    digitalWrite(white, HIGH);
+    }
+  else {
+    digitalWrite(orange, LOW);
+    digitalWrite(white, LOW);
+  }
+  }
